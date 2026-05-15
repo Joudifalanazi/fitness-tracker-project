@@ -27,9 +27,10 @@ def calculate_streak(workouts):
 
         dates.append(workout_date)
 
-    dates.sort()
+    dates = sorted(set(dates))
 
     streak = 1
+    max_streak = 1
 
     for i in range(1, len(dates)):
 
@@ -40,7 +41,13 @@ def calculate_streak(workouts):
         if difference == 1:
             streak += 1
 
-    return streak
+            if streak > max_streak:
+                max_streak = streak
+
+        else:
+            streak = 1
+
+    return max_streak
 
 def generate_achievement(total_workouts):
     """

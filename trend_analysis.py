@@ -1,18 +1,18 @@
 from datetime import datetime, timedelta
 def average_calories(workouts):
     """
-    Calculates average calories burned.
+    Calculates average calories burned per workout.
     """
-
     if len(workouts) == 0:
         return 0
 
     total = 0
 
     for workout in workouts:
-        total += workout["calories"]
+        total += float(workout["calories_burned"])
 
     return total / len(workouts)
+
 
 def detect_improvement(workouts):
     """
@@ -22,19 +22,30 @@ def detect_improvement(workouts):
     if len(workouts) < 2:
         return "Not enough data"
 
-    first_distance = workouts[0]["distance"]
-    last_distance = workouts[-1]["distance"]
+    first_distance = float(
+        workouts[0]["distance_km"]
+    )
 
-    improvement = ((last_distance - first_distance) / first_distance) * 100
+    last_distance = float(
+        workouts[-1]["distance_km"]
+    )
+
+    if first_distance == 0:
+        return "Invalid starting distance"
+
+    improvement = (
+        (last_distance - first_distance)
+        / first_distance
+    ) * 100
 
     return f"You improved by {improvement:.2f}%"
-
 def workouts_this_week(workouts):
     """
     Counts workouts completed in the last 7 days.
     """
 
     today = datetime.today()
+
     week_ago = today - timedelta(days=7)
 
     count = 0
@@ -51,6 +62,7 @@ def workouts_this_week(workouts):
 
     return count
 
+
 def weekly_summary(workouts):
     """
     Generates a weekly workout summary.
@@ -60,8 +72,14 @@ def weekly_summary(workouts):
     total_distance = 0
 
     for workout in workouts:
-        total_calories += workout["calories"]
-        total_distance += workout["distance"]
+
+        total_calories += float(
+            workout["calories_burned"]
+        )
+
+        total_distance += float(
+            workout["distance_km"]
+        )
 
     summary = (
         f"Weekly Summary:\n"
@@ -72,20 +90,27 @@ def weekly_summary(workouts):
 
     return summary
 
+
 if __name__ == "__main__":
 
     workouts = [
 
         {
             "date": "2026-05-10",
-            "distance": 3,
-            "calories": 200
+            "exercise_type": "Running",
+            "duration_minutes": 30,
+            "distance_km": 3,
+            "calories_burned": 200,
+            "average_heart_rate": 140
         },
 
         {
             "date": "2026-05-14",
-            "distance": 5,
-            "calories": 350
+            "exercise_type": "Running",
+            "duration_minutes": 40,
+            "distance_km": 5,
+            "calories_burned": 350,
+            "average_heart_rate": 150
         }
     ]
 
