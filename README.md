@@ -4,7 +4,7 @@
 ## Project Description
 This project is a Python-based fitness tracker that allows users to log workouts, calculate health metrics, monitor fitness goals, and export progress reports.
 
-## Features
+## Setup Instructions/Features
 - Create user profile
 - Add workout records
 - Save and load data using CSV/JSON
