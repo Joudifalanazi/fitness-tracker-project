@@ -4,7 +4,7 @@
 ## Project Description
 This project is a Python-based fitness tracker that allows users to log workouts, calculate health metrics, monitor fitness goals, and export progress reports.
 
-## Setup Instructions/Features
+## Features
 - Create user profile
 - Add workout records
 - Save and load data using CSV/JSON
@@ -13,6 +13,10 @@ This project is a Python-based fitness tracker that allows users to log workouts
 - Export progress report
 - Text-based dashboard
 
-## How to Run
+## Setup Instructions
+
+1. Download or clone the repository.
+
 ```bash
+git clone https://github.com/Joudifalanazi/fitness-tracker-project.git
 python main.py
