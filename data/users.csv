@@ -1,0 +1,5 @@
+user_id,name,age,weight_kg,height_cm,fitness_goal,target_calories,weekly_workout_goal
+1,Alex Carter,24,72,178,Weight Loss,1900,5
+2,Maya Johnson,21,58,165,Build Muscle,2200,4
+3,Daniel Smith,27,80,182,Improve Endurance,2500,6
+4,Sophia Lee,23,62,168,Maintain Fitness,2000,3
