@@ -1,0 +1,7 @@
+workout_id,user_id,date,exercise_type,duration_minutes,distance_km,calories_burned,average_heart_rate
+1,1,2026-05-10,Running,35,5.2,320,148
+2,2,2026-05-11,Cycling,45,14.5,410,136
+3,3,2026-05-12,Swimming,50,1.2,500,142
+4,4,2026-05-13,Walking,60,4.8,210,108
+5,1,2026-05-14,Weightlifting,40,0,350,125
+6,2,2026-05-15,Running,30,4.5,290,150
