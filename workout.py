@@ -10,8 +10,7 @@ def create_workout(date, exercise_type, duration_minutes, distance_km, calories_
         "calories_burned": calories_burned,
         "average_heart_rate": average_heart_rate
     }
-    return workout
-
+    
 
 def display_workout(workout):
     """
