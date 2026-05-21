@@ -16,6 +16,7 @@ class TestWorkout(unittest.TestCase):
 
         self.assertEqual(workout["exercise_type"], "Running")
         self.assertEqual(workout["duration_minutes"], 30)
+return workout
 
 if __name__ == "__main__":
     unittest.main()
